@@ -1,8 +1,8 @@
 
 const express = require('express');
 
-const {Products} = require('../models');
-const {Favorites} = require('../models');
+const {Products} = require('../models/product');
+const {Favorites} = require('../models/favorites');
 
 // products index function
 async function index(req,res,next) {

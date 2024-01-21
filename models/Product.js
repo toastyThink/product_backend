@@ -11,8 +11,8 @@ image: String,
 
 },{timestamps: true});
 
-module.exports = mongoose.model("Products", ProductSchema);
-
+const Products = mongoose.model("Products", ProductSchema);
+module.exports = {Products};
 //you need to modify the shema to account for differences 
 //in how each product api creates JSON objects 
 //for each individual item

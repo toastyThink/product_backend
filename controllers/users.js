@@ -1,5 +1,5 @@
 const express = require('express');
-const {Users} = require('../models');
+const {Users} = require('../models/user');
 
 async function index(req,res,next) {
 	try {

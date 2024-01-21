@@ -10,4 +10,5 @@ products:[{
 
 },{timestamps: true});
 
-module.exports = mongoose.model("Favorites", FavoritesSchema);
+const Favorites = mongoose.model("Favorites", FavoritesSchema);
+module.exports = {Favorites};

@@ -1,6 +1,6 @@
 const express = require('express');
 
-const {Favorites} = require('../models');
+const {Favorites} = require('../models/favorites');
 
 // favorites index function
 async function index(req,res,next) {
