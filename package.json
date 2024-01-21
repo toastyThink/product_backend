@@ -4,10 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./bin/www",
     "dev": "nodemon server.js"
   },
-  "proxy": "https://localhost:4000/products",
   "keywords": [],
   "author": "",
   "license": "ISC",
