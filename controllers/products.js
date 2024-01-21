@@ -1,7 +1,7 @@
 
 const express = require('express');
 
-const {Products} = require('../models/product');
+const {Products} = require('../models/Product');
 const {Favorites} = require('../models/favorites');
 
 // products index function
