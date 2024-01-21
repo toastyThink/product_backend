@@ -4,12 +4,10 @@ const {Favorites} = require('../models');
 
 // favorites index function
 async function index(req,res,next) {
-  console.log('getting favorites');
 	try {
     // get all products
-    res.json(await Favorites.find({}));
+    res.json(await Favorites.findOne({}).populate('products'));
   } catch (error) {
-
     res.status(400).json(error);
   }
 };
@@ -29,10 +27,22 @@ async function show(req,res,next) {
 // delete/destroy favorite
 async function destroy(req,res,next) {
     try {
-      res.json(await Favorites.findByIdAndDelete(req.params.id));
+      console.log("params id", req.params.id);
+
+      const findFav = await Favorites.findOne({});
+
+      const productsArr = findFav.products;
+
+      const indexToDelete = productsArr.indexOf(req.params.id)
+      console.log("index to delete: ", indexToDelete);
+
+      productsArr.splice(indexToDelete, 1);
+
+      findFav.save();
     } catch (error) {
    
       res.status(400).json(error);
+
     }
   };
   

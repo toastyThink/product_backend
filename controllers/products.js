@@ -28,17 +28,36 @@ async function index(req,res,next) {
 //   }
 // };
 
-// create product
-async function create(req,res,next) {
-  console.log(req.body);
-  try {
-    // create new products
-    res.json(await Favorites.create(req.body));
-  } catch (error) {
+//create favorite
+// async function create(req,res,next) {
+//   console.log(req.body);
+//   try {
+//     // create new favorite
+//     res.json(await Favorites.create(req.body));
+//   } catch (error) {
 
-    res.status(400).json(error);
-  }
+//     res.status(400).json(error);
+//   }
+// };
+
+async function handleAddToFavorites(req, res, next){
+  const bodyData = req.body;
+
+  const foundFavorite = await Favorites.findOne({user_id: bodyData.current_user });
+  
+    if(!foundFavorite){;
+        const favoriteData = {user_id : bodyData.current_user};
+        const newFav = await Favorites.create(favoriteData);
+
+        newFav.products.push(bodyData.product._id);
+        newFav.save();
+    
+   }else{
+      foundFavorite.products.push(bodyData.product._id);
+      foundFavorite.save();
+   }
 };
+  
 
 // show a product -> details page
 async function show(req,res,next) {
@@ -49,7 +68,7 @@ async function show(req,res,next) {
 
         res.status(400).json(error);
       }
-};
+    };
 
 // delete/destroy product
 async function destroy(req,res,next) {
@@ -78,7 +97,7 @@ async function update(req,res,next) {
 
 module.exports = {
 	index,
-	create,
+	create: handleAddToFavorites,
   // getFavorites,
 	show,
 	delete: destroy,
