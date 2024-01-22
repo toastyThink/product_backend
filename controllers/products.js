@@ -49,7 +49,7 @@ async function handleAddToFavorites(req, res, next){
         const favoriteData = {user_id : bodyData.current_user};
         const newFav = await Favorites.create(favoriteData);
 
-        newFav.products.push(bodyData.product._id);
+        newFav.products.push(bodyData.products._id);
         newFav.save();
     
    }else{
