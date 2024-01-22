@@ -6,15 +6,19 @@ Product Compare was a website I envisioned that would host product information f
 Presently the site is slim with only a favorites feature allowing users to add to a favorites list and remove items they don't want. I hope to expand on this project in the future if I can!
 
 Screenshots of core functionality, including descriptions or relevant user stories:
-![Alt text](image.png)
+![image](https://github.com/toastyThink/product_backend/assets/55202537/dbb4aaa4-4556-44dc-921f-d8b0d46ec117)
 
-![Alt text](image-1.png)
+![image](https://github.com/toastyThink/product_backend/assets/55202537/b551b3e7-5179-46c4-b49b-0d6a954fa563)
 
-![Alt text](image-2.png)
+![image](https://github.com/toastyThink/product_backend/assets/55202537/af362d6a-d78f-455c-b895-d5b1cf5b05c8)
 
-[Title](<../../../../../Desktop/Capstone Demo.mov>)
 
-A summary of technologies / APIS used plus links to the relevant resources (express, mongoose, Auth0, etc) documentation:
+
+A summary of technologies / APIS used plus lin
+
+https://github.com/toastyThink/product_backend/assets/55202537/28d908a4-d792-4239-b8a2-bc6c06803a98
+
+ks to the relevant resources (express, mongoose, Auth0, etc) documentation:
 APIS:
 FakeStore API: https://fakestoreapi.com/
 
@@ -25,13 +29,21 @@ HTML
 CSS
 JavaScript
 React: https://react.dev/
+
 Vite: https://vitejs.dev/
+
 Express: https://expressjs.com/
+
 MongoDB: https://www.mongodb.com/cloud/atlas/efficiency?utm_content=rlsapostreg&utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_general_retarget-brand-postreg_gic-null_amers-us-ca_ps-all_desktop_eng_lead&utm_term=&utm_medium=cpc_paid_search&utm_ad=&utm_ad_campaign_id=14383025495&adgroup=129270225274&cq_cmp=14383025495&gad_source=1&gclid=Cj0KCQiAnrOtBhDIARIsAFsSe50-YrRg06tJAYmrKytIQPsCCQvEpfPLltv4BdxLxuvwsUWdx7IiDy8aAtTXEALw_wcB
+
 Mongoose: https://mongoosejs.com/
+
 Node.js: https://nodejs.org/en/about
+
 Netlify: https://www.netlify.com/
+
 Heroku: https://www.heroku.com/platform
+
 Tailwind.css: https://tailwindcss.com/
 
 Instructions for how a person might spin up a copy of your app locally:
@@ -39,7 +51,8 @@ If you want to run the app locally you'll need to download the files from the fr
 
 Summary of current user flow / feature list
 
-![Alt text](image-3.png)
+<img width="1147" alt="image" src="https://github.com/toastyThink/product_backend/assets/55202537/6fe7ee4f-1fd8-48e5-aed5-36df0e858627">
+
 
 Features: 
 The user can view all available products on the main store page, all products are loaded from the database.
